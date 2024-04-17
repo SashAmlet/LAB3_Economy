@@ -26,7 +26,10 @@ left_frobenius_vector  = left_eigenvectors[:, np.argmax(left_eigenvectors == fro
 print("Frobenius number", frobenius_number)
 print("Right frobenius vector", right_frobenius_vector)
 print("left frobenius vector", left_frobenius_vector)
-
+if frobenius_number < 1:
+    print("Productive")
+else:
+    print("Unproductive")
 # Знайти коефіцієнти характеристичного поліному
 polynomial_coefficients = np.poly(A)
 print("Coefficients of the characteristic polynomial:", polynomial_coefficients)
